@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Six sessions on listening with a pen: five shapes, seven layouts, the hierarchy that makes a page readable by somebody else, the evidence read honestly, and a bench that plays a real talk at speaking pace and measures what you kept. Free, by Phoebe Fu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Learn Sketchnoting with Phoebe">
+<meta property="og:description" content="Typing everything kept 10 of 12 ideas in 286 words, 84 percent of them the speaker's. Choosing kept 12 in 110, none of them. Six sessions on the choosing.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-sketchnoting-with-phoebe/">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-sketchnoting-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn Sketchnoting with Phoebe">
+<meta name="twitter:description" content="Six sessions on listening with a pen, with a bench that plays a real talk and measures what survived.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-sketchnoting-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Learn Sketchnoting with Phoebe</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(29,78,137,.14); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#F3F6FA); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .not-this { border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: var(--radius); background: #fff; padding: 1.1rem 1.3rem; margin-top: 1.2rem; }
+  .not-this h3 { font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn with Phoebe · Visual Thinking &amp; Storytelling</div>
+    <h1>Learn <span class="accent">Sketchnoting</span> with Phoebe</h1>
+    <p class="sub">Somebody talks for nine minutes and says twelve things that matter. Typed as fast as fingers go, the notes come to 286 words, 84 percent of them the speaker's exact words, and two of the twelve never arrive because the typist was still on the last sentence. Captured as a keyword and one line in the listener's own words: 110 words, all twelve, none of them the speaker's. Six sessions on that second habit. What sketchnoting is when you take the drawing anxiety out of it, the five shapes and the seven layouts, the hierarchy that makes a page readable by a colleague, and a bench that plays the talk at speaking pace and measures what you kept.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="12">12</b><span>ideas, one talk</span></div>
+      <div class="stat"><b data-count="84">84</b><span>% verbatim when typed</span></div>
+      <div class="stat"><b data-count="0">0</b><span>% when chosen</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The six sessions 🎯 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· one talk, six captures</span></h2>
+      <p class="plede">The running situation is <strong>Daybreak's autumn roast talk</strong>: the founder of the coffee-subscription company from the SQL, dataviz, visual-storytelling and mind-mapping courses gives the roastery team nine minutes on where the launch stands. Twelve things are worth keeping. Every session captures the same nine minutes a different way, so the only thing that ever changes is what you kept and where it sits on the page.</p>
+    </div>
+
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-ideas-not-art.html" style="--diff:#7FD8CB">
+        <span class="cicon">✏️</span>
+        <span class="cnum">Session 1 · easy</span>
+        <h3>Ideas, not art</h3>
+        <p>Listening with a pen. The four moves, the drawing objection answered with Rohde's own scale, and three separate literatures read past their headlines: doodling, the drawing effect, pen versus keyboard.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span></span>
+      </a>
+      <a class="course-card" href="courses/02-five-shapes-one-vocabulary.html" style="--diff:#7FD8CB">
+        <span class="cicon">🔺</span>
+        <span class="cnum">Session 2 · easy</span>
+        <h3>Five shapes, one vocabulary</h3>
+        <p>Circle, square, triangle, line, dot. Every icon is a recipe of two or three, and the twenty icons for your own work are built before the meeting so the mark is already in the hand.</p>
+        <span class="meta"><span class="pill">twenty icons</span></span>
+      </a>
+      <a class="course-card" href="courses/03-the-selection-bench.html" style="--diff:#F87171">
+        <span class="cicon">📏</span>
+        <span class="cnum">Session 3 · bench night</span>
+        <h3>The selection bench</h3>
+        <p>The talk plays one word at a time at 150 words per minute. You capture. The bench counts ideas kept of twelve, verbatim overlap by the research's own definition, and what each idea cost. Four presets and one trap.</p>
+        <span class="meta"><span class="pill amber">★ the bench</span></span>
+      </a>
+      <a class="course-card" href="courses/04-seven-layouts-one-page.html" style="--diff:#FBBF24">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Session 4 · medium</span>
+        <h3>Seven layouts, one page</h3>
+        <p>Rohde's seven patterns drawn small, and how to pick one from the agenda before the speaker starts. The same twelve ideas on a grid and on a path, and which page a colleague can find something in.</p>
+        <span class="meta"><span class="pill">skeleton first</span></span>
+      </a>
+      <a class="course-card" href="courses/05-readable-by-someone-else.html" style="--diff:#FBBF24">
+        <span class="cicon">🔍</span>
+        <span class="cnum">Session 5 · medium</span>
+        <h3>Readable by someone else</h3>
+        <p>Three weights and one accent. Hierarchy, one rung of the lettering ladder, containers and connectors, and the thirty-second scan: hand the page to a colleague and count.</p>
+        <span class="meta"><span class="pill">thirty seconds</span></span>
+      </a>
+      <a class="course-card" href="courses/06-live-then-shared.html" style="--diff:#FB923C">
+        <span class="cicon">📨</span>
+        <span class="cnum">Session 6 · hands-on</span>
+        <h3>Live, then shared</h3>
+        <p>One real twenty-minute talk captured live with everything so far, then the one-page recap that leaves your desk. Final scorecard on a page somebody else will actually read.</p>
+        <span class="meta"><span class="pill amber">🔒 final scorecard</span></span>
+      </a>
+    </div>
+
+    <div class="diff-legend">
+      <span><i style="background:#7FD8CB"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on</span>
+      <span><i style="background:#F87171"></i>bench night</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Your passport 🎫</h2>
+      <p class="plede">Clear all three quiz questions in a session and it gets stamped. Six stamps means your notes stop being a transcript with gaps. Stamps live in this browser only.</p>
+    </div>
+    <div class="pp-strip"></div>
+  </section>
+
+  <section class="section">
+    <div class="not-this">
+      <h3>What this course is not, so you land in the right place 🧭</h3>
+      <table class="clean">
+        <tr><th>If your question is</th><th>Go here instead</th></tr>
+        <tr><td>How do I give my notes a radial shape with one centre and keyword branches, after the meeting?</td><td><span class="mono">learn-mind-mapping-with-phoebe</span></td></tr>
+        <tr><td>Which chart does this question need, and is it honest?</td><td><span class="mono">learn-dataviz-with-phoebe</span></td></tr>
+        <tr><td>The notes are good; how do I turn them into a deck that changes a decision?</td><td><span class="mono">learn-visual-storytelling-with-phoebe</span></td></tr>
+        <tr><td>How do I letter in serif, slab, script and 3D, or draw people well?</td><td>Rohde's <em>Sketchnote Handbook</em> and <em>Workbook</em>; named here, taught there</td></tr>
+        <tr><td><strong>How do I capture a live talk as a page somebody else can read, without being able to draw?</strong></td><td><strong>you are in the right place</strong></td></tr>
+      </table>
+      <p style="margin-top:.7rem;font-size:.86rem;color:var(--muted)"><strong>Mind mapping is a shape you give notes afterwards. Sketchnoting is what you do while the speaker is still talking.</strong> Two courses owning one grammar disagree with each other eventually, so each owns its half.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: the page is the talk reduced to what you will need, made while the talk is still happening, and the reducing is the work.</p>
+      <div class="path"><b>⏱️ I have a talk to capture tomorrow</b>
+        <a class="pstep" href="courses/01-ideas-not-art.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-five-shapes-one-vocabulary.html">2</a>
+        <span style="font-size:.82rem;color:var(--muted)">the habit and the twenty marks that make it fast</span>
+      </div>
+      <div class="path"><b>📏 I want to know if it actually works</b>
+        <a class="pstep" href="courses/01-ideas-not-art.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-the-selection-bench.html">3</a>
+        <span style="font-size:.82rem;color:var(--muted)">three literatures read honestly, then a bench that measures the one thing they support</span>
+      </div>
+      <div class="path"><b>🎯 The whole thing</b>
+        <a class="pstep" href="courses/01-ideas-not-art.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-five-shapes-one-vocabulary.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-the-selection-bench.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-seven-layouts-one-page.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-readable-by-someone-else.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-live-then-shared.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">from a transcript with gaps to a page that leaves your desk</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>What is honest here 🧾</h2>
+      <p class="plede">The bench in session 3 computes its numbers from what you typed against the transcript. The one-line verdict is a rule of thumb and is labelled as one on the widget. There is no recall model, because the evidence does not support one, and there is no drawing score, because a browser cannot see a pen.</p>
+    </div>
+    <table class="clean">
+      <tr><th>Claim</th><th>Status</th></tr>
+      <tr><td>Ideas captured, words, lines, words per idea, own words</td><td><strong>Really counted</strong> in the capture box against the twelve keyed ideas; the chips show which registered</td></tr>
+      <tr><td>Verbatim overlap, longest run</td><td><strong>Really computed</strong> with the definition from Mueller and Oppenheimer 2014, the one finding of theirs that Urry et al. 2021 reproduced</td></tr>
+      <tr><td>The talk at speaking pace</td><td><strong>Really timed</strong>: one word per interval at 130, 150 or 175 words per minute, checked headlessly (ten words in four seconds at 150)</td></tr>
+      <tr><td>The verdict line</td><td><strong>A heuristic,</strong> labelled as one on the widget</td></tr>
+      <tr><td>"Sketchnoting improves recall by X"</td><td><strong>Not claimed anywhere.</strong> Three literatures are quoted with both halves of every abstract, and the sketchnoting studies that exist measured emotions and satisfaction, not recall</td></tr>
+      <tr><td>Drawing quality</td><td><strong>Not measured.</strong> Its cost in ideas is, via the anti-preset</td></tr>
+      <tr><td>Daybreak's talk</td><td>A teaching situation. The measurement code is real</td></tr>
+    </table>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole course at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-sketchnoting-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span>Source map, every number and the bench's honest limits: <span class="mono">materials/official-course-map.md</span></span>
+  </footer>
+
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nSketchnoting",
+  centerColor: "#143A66",
+  sessions: [
+    { label: "Ideas,\nnot art", href: "courses/01-ideas-not-art.html", color: "#7FD8CB",
+      concepts: [
+        { label: "Four moves", href: "courses/01-ideas-not-art.html" },
+        { label: "Right of centre on the scale", href: "courses/01-ideas-not-art.html" },
+        { label: "Three literatures", href: "courses/01-ideas-not-art.html" } ] },
+    { label: "Five shapes,\none vocabulary", href: "courses/02-five-shapes-one-vocabulary.html", color: "#7FD8CB",
+      concepts: [
+        { label: "Circle, square, triangle, line, dot", href: "courses/02-five-shapes-one-vocabulary.html" },
+        { label: "Icons are recipes", href: "courses/02-five-shapes-one-vocabulary.html" },
+        { label: "Twenty nouns, twenty marks", href: "courses/02-five-shapes-one-vocabulary.html" } ] },
+    { label: "The selection\nbench", href: "courses/03-the-selection-bench.html", color: "#F87171",
+      concepts: [
+        { label: "84% verbatim vs 0%", href: "courses/03-the-selection-bench.html" },
+        { label: "12 ideas in 110 words", href: "courses/03-the-selection-bench.html" },
+        { label: "Drawing is priced", href: "courses/03-the-selection-bench.html" } ] },
+    { label: "Seven layouts,\none page", href: "courses/04-seven-layouts-one-page.html", color: "#FBBF24",
+      concepts: [
+        { label: "Rohde's seven patterns", href: "courses/04-seven-layouts-one-page.html" },
+        { label: "Skeleton before the talk", href: "courses/04-seven-layouts-one-page.html" },
+        { label: "Grid finds, path remembers", href: "courses/04-seven-layouts-one-page.html" } ] },
+    { label: "Readable by\nsomeone else", href: "courses/05-readable-by-someone-else.html", color: "#FBBF24",
+      concepts: [
+        { label: "Three weights, one accent", href: "courses/05-readable-by-someone-else.html" },
+        { label: "Containers and connectors", href: "courses/05-readable-by-someone-else.html" },
+        { label: "The thirty-second scan", href: "courses/05-readable-by-someone-else.html" } ] },
+    { label: "Live,\nthen shared", href: "courses/06-live-then-shared.html", color: "#FB923C",
+      concepts: [
+        { label: "Twenty minutes, live", href: "courses/06-live-then-shared.html" },
+        { label: "The one-page recap", href: "courses/06-live-then-shared.html" },
+        { label: "Final scorecard", href: "courses/06-live-then-shared.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
